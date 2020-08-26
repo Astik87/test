@@ -26,6 +26,7 @@ gulp.task('browser-sync', function() {
 gulp.task('scripts', function() {
     return gulp.src([
         'app/libs/jquery/dist/jquery.min.js',
+        'app/libs/jquery-knob/dist/jquery.knob.min.js',
         'app/libs/bootstrap/dist/js/bootstrap.min.js'
     ])
     .pipe(concat('libs.min.js'))
@@ -59,7 +60,7 @@ gulp.task('watch', function() {
 
 gulp.task('build', function() {
     let buildCss = gulp.src([
-        'app/css/min.css',
+        'app/css/main.css',
         'app/css/libs.min.css'
     ])
     .pipe(gulp.dest('dist/css'));
